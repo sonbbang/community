@@ -1,10 +1,10 @@
+// components/layout/NewPostButton.tsx
 "use client"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { NewPostDialog } from "@/components/post/NewPostDialog"
 import { Pencil } from "lucide-react"
 
-// NewPostDialog will be implemented in Task 10
-// Using a placeholder open state for now
 export function NewPostButton({ mobile = false }: { mobile?: boolean }) {
   const [open, setOpen] = useState(false)
 
@@ -23,6 +23,7 @@ export function NewPostButton({ mobile = false }: { mobile?: boolean }) {
           새 글 작성
         </Button>
       )}
+      <NewPostDialog open={open} onOpenChange={setOpen} />
     </>
   )
 }

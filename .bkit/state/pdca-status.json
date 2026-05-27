@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-05-27T11:06:12.632Z",
+  "lastUpdated": "2026-05-27T11:10:42.710Z",
   "activeFeatures": [
     "todo-app",
     "api",
@@ -30,7 +30,9 @@
     "upload",
     "actions",
     "layout",
-    "(main)"
+    "(main)",
+    "user",
+    "post"
   ],
   "primaryFeature": "todo-app",
   "features": {
@@ -394,9 +396,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-27T11:05:48.547Z",
-        "lastUpdated": "2026-05-27T11:06:01.620Z"
+        "lastUpdated": "2026-05-27T11:10:42.710Z"
       },
-      "lastFile": "C:\\Users\\n3299\\git\\community\\components\\layout\\BottomNav.tsx"
+      "lastFile": "C:\\Users\\n3299\\git\\community\\components\\layout\\NewPostButton.tsx"
     },
     "(main)": {
       "phase": "do",
@@ -410,6 +412,32 @@
         "lastUpdated": "2026-05-27T11:06:12.632Z"
       },
       "lastFile": "C:\\Users\\n3299\\git\\community\\app\\(main)\\layout.tsx"
+    },
+    "user": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-27T11:09:41.970Z",
+        "lastUpdated": "2026-05-27T11:09:41.970Z"
+      },
+      "lastFile": "C:\\Users\\n3299\\git\\community\\components\\user\\UserAvatar.tsx"
+    },
+    "post": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-27T11:09:46.297Z",
+        "lastUpdated": "2026-05-27T11:10:36.547Z"
+      },
+      "lastFile": "C:\\Users\\n3299\\git\\community\\components\\post\\NewPostDialog.tsx"
     }
   },
   "pipeline": {
@@ -420,7 +448,7 @@
   "session": {
     "startedAt": "2026-03-20T10:18:23.279Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-05-27T11:06:12.632Z"
+    "lastActivity": "2026-05-27T11:10:42.710Z"
   },
   "history": [
     {
@@ -2670,6 +2698,72 @@
     {
       "timestamp": "2026-05-27T11:06:12.632Z",
       "feature": "(main)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:09:41.970Z",
+      "feature": "user",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:09:46.298Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:09:53.000Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:09:57.112Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:02.406Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:06.853Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:15.995Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:18.380Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:29.739Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:36.547Z",
+      "feature": "post",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:10:42.710Z",
+      "feature": "layout",
       "phase": "do",
       "action": "updated"
     }
