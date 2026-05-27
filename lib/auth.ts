@@ -22,20 +22,25 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (account?.provider !== "kakao" || !profile) return false
       const kp = profile as unknown as KakaoProfile
 
-      await prisma.user.upsert({
-        where: { kakaoId: String(kp.id) },
-        update: {
-          name: kp.kakao_account?.profile?.nickname ?? "사용자",
-          avatarUrl: kp.kakao_account?.profile?.profile_image_url ?? null,
-        },
-        create: {
-          kakaoId: String(kp.id),
-          name: kp.kakao_account?.profile?.nickname ?? "사용자",
-          username: await generateUniqueUsername(kp),
-          avatarUrl: kp.kakao_account?.profile?.profile_image_url ?? null,
-        },
-      })
-      return true
+      try {
+        await prisma.user.upsert({
+          where: { kakaoId: String(kp.id) },
+          update: {
+            name: kp.kakao_account?.profile?.nickname ?? "사용자",
+            avatarUrl: kp.kakao_account?.profile?.profile_image_url ?? null,
+          },
+          create: {
+            kakaoId: String(kp.id),
+            name: kp.kakao_account?.profile?.nickname ?? "사용자",
+            username: await generateUniqueUsername(kp),
+            avatarUrl: kp.kakao_account?.profile?.profile_image_url ?? null,
+          },
+        })
+        return true
+      } catch (error) {
+        console.error("Failed to upsert user during Kakao sign-in:", error)
+        return false
+      }
     },
 
     async jwt({ token, account, profile }) {
@@ -54,8 +59,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     },
 
     async session({ session, token }) {
-      session.user.id = token.userId as string
-      session.user.username = token.username as string
+      if (token.userId) session.user.id = token.userId
+      if (token.username) session.user.username = token.username
       return session
     },
   },
