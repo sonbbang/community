@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-05-27T10:49:43.055Z",
+  "lastUpdated": "2026-05-27T11:01:35.018Z",
   "activeFeatures": [
     "todo-app",
     "api",
@@ -26,7 +26,9 @@
     "[id]",
     "job",
     "community",
-    "__tests__"
+    "__tests__",
+    "upload",
+    "actions"
   ],
   "primaryFeature": "todo-app",
   "features": {
@@ -338,9 +340,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-27T09:55:07.814Z",
-        "lastUpdated": "2026-05-27T10:49:43.055Z"
+        "lastUpdated": "2026-05-27T10:54:34.729Z"
       },
-      "lastFile": "C:\\Users\\n3299\\git\\community\\middleware.ts"
+      "lastFile": "C:\\Users\\n3299\\git\\community\\lib\\supabase.ts"
     },
     "__tests__": {
       "phase": "do",
@@ -354,6 +356,32 @@
         "lastUpdated": "2026-05-27T10:45:25.240Z"
       },
       "lastFile": "C:\\Users\\n3299\\git\\community\\__tests__\\lib\\generate-username.test.ts"
+    },
+    "upload": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-27T10:54:39.378Z",
+        "lastUpdated": "2026-05-27T10:56:09.719Z"
+      },
+      "lastFile": "C:\\Users\\n3299\\git\\community\\app\\api\\upload\\route.ts"
+    },
+    "actions": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-27T10:57:49.927Z",
+        "lastUpdated": "2026-05-27T11:01:35.018Z"
+      },
+      "lastFile": "C:\\Users\\n3299\\git\\community\\__tests__\\actions\\reaction.test.ts"
     }
   },
   "pipeline": {
@@ -364,7 +392,7 @@
   "session": {
     "startedAt": "2026-03-20T10:18:23.279Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-05-27T10:49:43.055Z"
+    "lastActivity": "2026-05-27T11:01:35.018Z"
   },
   "history": [
     {
@@ -2464,6 +2492,108 @@
     {
       "timestamp": "2026-05-27T10:49:43.055Z",
       "feature": "community",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:52:01.899Z",
+      "feature": "community",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:52:09.809Z",
+      "feature": "community",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:53:07.021Z",
+      "feature": "community",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:54:34.729Z",
+      "feature": "community",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:54:39.378Z",
+      "feature": "upload",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:56:09.719Z",
+      "feature": "upload",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:57:49.927Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:58:09.308Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:58:25.535Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T10:58:30.419Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:00:05.948Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:00:15.123Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:00:23.825Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:00:36.430Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:00:53.649Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:01:26.258Z",
+      "feature": "actions",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-27T11:01:35.018Z",
+      "feature": "actions",
       "phase": "do",
       "action": "updated"
     }

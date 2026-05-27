@@ -26,4 +26,5 @@ export async function toggleFollow(targetUserId: string) {
   }
 
   revalidatePath("/")
+  revalidatePath(`/${targetUserId}`)
 }

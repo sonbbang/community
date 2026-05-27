@@ -42,7 +42,7 @@ describe("toggleLike", () => {
 
   it("throws Unauthorized when no session", async () => {
     const { auth } = await import("@/lib/auth")
-    vi.mocked(auth).mockResolvedValueOnce(null)
+    vi.mocked(auth).mockResolvedValueOnce(null as any)
     await expect(toggleLike("post-1")).rejects.toThrow("Unauthorized")
   })
 })
@@ -70,5 +70,11 @@ describe("toggleRepost", () => {
     expect(prisma.repost.delete).toHaveBeenCalledWith({
       where: { userId_postId: { userId: "user-1", postId: "post-1" } },
     })
+  })
+
+  it("throws Unauthorized when no session", async () => {
+    const { auth } = await import("@/lib/auth")
+    vi.mocked(auth).mockResolvedValueOnce(null as any)
+    await expect(toggleRepost("post-1")).rejects.toThrow("Unauthorized")
   })
 })

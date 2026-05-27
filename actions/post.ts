@@ -9,7 +9,10 @@ export async function createPost(formData: FormData) {
   if (!session?.user?.id) throw new Error("Unauthorized")
 
   const content = (formData.get("content") as string | null)?.trim() || null
-  const imageUrls = formData.getAll("imageUrls") as string[]
+  const rawImageUrls = formData.getAll("imageUrls") as string[]
+  const imageUrls = rawImageUrls.filter((url) => {
+    try { new URL(url); return true } catch { return false }
+  })
 
   if (!content && imageUrls.length === 0) {
     throw new Error("Post must have content or at least one image")
@@ -36,4 +39,5 @@ export async function deletePost(postId: string) {
 
   await prisma.post.delete({ where: { id: postId } })
   revalidatePath("/")
+  revalidatePath(`/post/${postId}`)
 }
