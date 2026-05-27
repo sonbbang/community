@@ -1,0 +1,11 @@
+{
+  "sessionCount": 22,
+  "lastSession": {
+    "startedAt": "2026-05-27T07:14:55.192Z",
+    "platform": "claude",
+    "level": "Starter"
+  },
+  "currentFeature": "todo-app",
+  "phase": "check",
+  "matchRate": 88
+}
