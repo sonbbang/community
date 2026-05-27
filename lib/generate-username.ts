@@ -20,10 +20,18 @@ export async function generateUniqueUsername(
 
   let username = base
   let count = 0
+  const MAX_ATTEMPTS = 1000
 
-  while (await prisma.user.findUnique({ where: { username }, select: { id: true } })) {
+  while (
+    count < MAX_ATTEMPTS &&
+    (await prisma.user.findUnique({ where: { username }, select: { id: true } }))
+  ) {
     count++
     username = `${base}${count}`
+  }
+
+  if (count >= MAX_ATTEMPTS) {
+    throw new Error(`Unable to generate unique username for base "${base}" after ${MAX_ATTEMPTS} attempts`)
   }
 
   return username

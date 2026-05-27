@@ -35,4 +35,14 @@ describe("generateUniqueUsername", () => {
     const result = await generateUniqueUsername({ id: 1 } as any)
     expect(result).toBe("user")
   })
+
+  it("truncates base to 15 chars from a long nickname", async () => {
+    vi.mocked(prisma.user.findUnique).mockResolvedValue(null)
+    const profile = {
+      id: 1,
+      kakao_account: { profile: { nickname: "averylongnickname123" } },
+    }
+    const result = await generateUniqueUsername(profile as any)
+    expect(result).toBe("averylongnickna") // exactly 15 chars
+  })
 })
