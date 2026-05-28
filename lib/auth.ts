@@ -15,7 +15,12 @@ interface KakaoProfile {
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  providers: [Kakao],
+  providers: [
+    Kakao({
+      clientId: process.env.KAKAO_CLIENT_ID!,
+      clientSecret: process.env.KAKAO_CLIENT_SECRET!,
+    }),
+  ],
   session: { strategy: "jwt" },
   callbacks: {
     async signIn({ account, profile }) {
